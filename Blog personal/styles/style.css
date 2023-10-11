@@ -1,0 +1,34 @@
+
+  .noticia {
+    width: calc(50% - 20px);
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f2f2f2; /* Color de fondo gris */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+header {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+#noticias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.noticia {
+    width: calc(50% - 20px);
+    border: 1px solid #ccc;
+    padding: 10px;
+}

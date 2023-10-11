@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Principal</a></li>
+                <li>|</li>
+                <li><a href="#">Ayuda</a></li>
+                <li>|</li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+
+
+    <p>Fecha: 01 de Octubre de 2023</p>
+    <section id="noticias">
+        <article class="noticia" data-mes="10" data-ano="2023">
+            <h2><a href="#">Título de la primera noticia</a></h2>
+            <p>Fecha: 01 de Octubre de 2023</p>
+            <div class="contenido-gris">
+                <p>Contenido de la primera noticia Lorem ipsum...</p>
+            </div>
+        </article>
+
+
+
+         <p>Fecha: 02 de Noviembre de 2023</p>
+        <article class="noticia" data-mes="11" data-ano="2023">
+            <h2><a href="#">Título de la segunda noticia</a></h2>
+            <p>Fecha: 02 de Noviembre de 2023</p>
+            <div class="contenido-gris">
+                <p>Contenido de la segunda noticia Lorem ipsum...</p>
+            </div>
+        </article>
+        
+        <!-- Agrega más noticias aquí siguiendo el mismo patrón -->
+    </section>
+    
+    <aside id="sidebar">
+        <section id="filtro">
+            <h2>Archivo</h2>
+            <label for="year-select">Año:</label>
+            <select id="year-select">
+                <option value="2021">2023</option>
+                <option value="2022">2023</option>
+                <option value="2023">2023</option>
+                <option value="2024">2023</option>
+                <option value="2025">2023</option>
+                <option value="2026">2023</option>
+                <!-- Agrega más opciones de año si es necesario -->
+            </select>
+            <label for="month-select">Mes:</label>
+            <select id="month-select">
+                <option value="01">Enero</option>
+                <option value="02">Febrero</option>
+                <option value="03">Marzo</option>
+                <option value="04">Abril</option>
+                <option value="05">Mayo</option>
+                <option value="06">Junio</option>
+                <option value="07">Julio</option>
+                <option value="08">Agosto</option>
+                <option value="09">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+                <!-- Agrega más opciones de mes si es necesario -->
+            </select>
+            <button onclick="filtrarNoticias()">Filtrar</button>
+        </section>
+        
+        <section id="acerca-de">
+            <h2>Acerca de</h2>
+            <p>Mi nombre</p>
+            <a href="#">Ver mi perfil</a>
+        </section>
+    </aside>
+    
+    <footer>
+        <hr>
+        <p style="text-align: center;">Derechos reservados 2010-2021</p>
+    </footer>
+
+    <script>
+        function filtrarNoticias() {
+            const selectedMonth = document.getElementById("month-select").value;
+            const selectedYear = document.getElementById("year-select").value;
+            const noticias = document.querySelectorAll(".noticia");
+
+            noticias.forEach(noticia => {
+                const mesNoticia = noticia.getAttribute("data-mes");
+                const anoNoticia = noticia.getAttribute("data-ano");
+
+                if (mesNoticia === selectedMonth && anoNoticia === selectedYear) {
+                    noticia.style.display = "block";
+                } else {
+                    noticia.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
