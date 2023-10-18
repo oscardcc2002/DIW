@@ -1,0 +1,12 @@
+sudo nano /etc/vsftpd.conf
+write_enable=YES
+sudo useradd -m paiporta
+systemctl restart vsftpd
+sudo passwd paiporta123
+-->ftp 192.168.4.217
+-->paiporta
+-->paiporta123
+-->lcd /home/oscar/Desktop
+-->pwd
+-->cd /home/paiporta/Desktop
+-->put index.html
