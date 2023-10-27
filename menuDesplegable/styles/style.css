@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+nav{
+
+    word-spacing: 8pt;
+}
+
 ul li a {
     text-decoration: none;
     color: black;
@@ -72,8 +77,8 @@ nav li ul li:first-child:before {
 }
 
 ul li:first-child ul {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
 }
 
 ul li:first-child {
@@ -88,15 +93,15 @@ nav li ul li:first-child:before {
     height: 0;
     border-style: solid;
     border-width: 8px 8px 0;
-    border-color: #313131 transparent transparent transparent;
+    border-color: #313131 transparent;
     left: 50%;
     top: -8px;
     margin-left: -8px;
 }
 
 ul li:last-child ul {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px !important;
+    border-bottom-right-radius: 3px !important;
 }
 
 ul li ul li a {
