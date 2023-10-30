@@ -130,6 +130,8 @@ header {
              background-repeat: no-repeat;
               text-align: center;
                padding-top:10px;
+               position: relative;
+
              
           }
 
@@ -277,21 +279,28 @@ header {
 
 
 /* Agrega estilos para el menú desplegable */
-#videos ul {
-  display: none;
+#videos > ul {
+  display: none; /* Oculta el submenu por defecto */
   position: absolute;
+  overflow: hidden;
   background-color: #e34c26;
   list-style-type: none;
   padding: 0;
-  z-index: 1;
+  z-index: 2;
+  transition: height linear 0.5s; /* Reduce la duración de la transición */
 }
 
-#videos:hover ul {
-  display: block;
+#videos:hover > ul {
+  display: block; /* Muestra el submenu al pasar el cursor sobre #videos */
+  height: 200px;
 }
 
-#videos ul li {
+#videos > ul > li {
   background-color: #f06529;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  margin: 0px;
 }
 
 #videos ul li:nth-child(odd) {
@@ -300,14 +309,23 @@ header {
 
 #videos ul li:hover {
   background-color: #ff7e42;
+  overflow: visible;
+  display: block;
+  height: auto;
 }
 
-#videos ul li:first-child:before {
-  content: "";
+#videos > ul > li:first-child::before {
+  content: '';
   position: absolute;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 15px solid #e34c26;
-  top: -15px;
-  left: 10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 6px 10px 6px; /* Controla el tamaño del triángulo */
+  border-color: transparent transparent #f06529 transparent;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
+
+
