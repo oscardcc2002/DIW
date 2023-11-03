@@ -1,0 +1,88 @@
+body {
+    margin: 10px;
+}
+
+
+form {
+    margin: 10px auto; /* Márgenes superior e inferior 10px, el resto automáticos */
+    border: 2px solid #888; /* Borde superior e inferior de 2px con color #888 */
+    width: 710px; /* Ancho de 710px */
+    text-align: center; /* Texto alineado al centro */
+    margin: 20px; /* Márgenes externos de 20px */
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo de color negro con una opacidad del 20% */
+    background-image: url("../imgs/bg-form.png"); /* Imagen de fondo */
+    background-position: center; /* Posicionada al centro */
+    background-repeat: no-repeat;
+    border: 2px solid #888;
+    width: 710px;
+    margin: 20px auto;
+    background-position: bottom;
+   
+}
+
+/* Estilo para la lista */
+ul {
+    list-style: none; /* Elimina las viñetas */
+}
+
+/* Estilo para los elementos de la lista */
+li {
+    margin-bottom: 15px; /* Margen inferior de 15px */
+}
+
+/* Estilo para los elementos label */
+label {
+    display: block; /* Muestra como bloque */
+    margin: auto; /* Márgenes automáticos */
+    text-align: center; /* Alineados al centro */
+}
+
+/* Estilo para el título del formulario */
+h1 {
+    font-size: 2em; /* Tamaño del texto 2em */
+    margin-bottom: 20px; /* Margen interno inferior de 20px */
+    font-size: 2em;
+    margin-bottom: 20px;
+    background-image: url("../imgs/bg-formtitle-left.png"), url("../imgs/bg-formtitle-right.png");
+    background-size: 100px auto, 100px auto;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left bottom, right bottom;
+}
+
+/* Estilo para el botón "ENVÍAME" */
+
+#registro-submit{
+
+    border: none; /* Elimina los bordes */
+    border-radius: 5px; /* Redondea las esquinas a 5px */
+    background: radial-gradient(circle at center, rgb(144, 144, 144), rgb(72, 72, 72)); /* Fondo degradado radial */
+    color: white; /* Texto de color blanco */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-size: 2em; /* Tamaño 2em */
+    font-family: Tahoma, Geneva, sans-serif; /* Fuente */
+    opacity: 0.8; /* Opacidad del 80% */
+    transition: opacity 0.25s linear; /* Transición al pasar el ratón */
+}
+
+#registro-submit:hover {
+    opacity: 1; /* Al pasar el ratón, se hace 100% opaco con una transición */
+}
+
+input{
+
+    background: transparent no-repeat top right;
+}
+
+input:valid:focus {
+    background-image: url('../imgs/valid.png');
+    background-repeat: no-repeat;
+}
+
+input:invalid:focus {
+    background-image: url('../imgs/invalid.png');
+    background-repeat: no-repeat;
+}
+
+label, button {
+    font-family: LeagueGothic, sans-serif;
+}

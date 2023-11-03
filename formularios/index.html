@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form id="registro" method="post">
+        <h1>Regístrate!</h1>
+        <ul>
+            <li>
+                <label for="nombre">Mi nombre es:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </li>
+
+           <li>
+            <label for="email">Mi e-email es:</label>
+            <input type="email" id="email" name="email" required multiple>
+           </li>
+
+           <li>
+            <label for="recuerdame">Recuérdame en este equipo</label><br>
+            <input type="checkbox" id="recuerdame" name="recuerdame" value="recuerdame">
+           </li>
+
+           <li>
+            <label for="url">Mi dirección web es:</label>
+            <input placeholder="http://ejemplo.com" type="url" id="url" name="url">
+           </li>
+
+           <li>
+            <label for="contrasena">Contraseña (al menos 6 caracteres, sin espacios):</label>
+        <input type="password" id="contrasena" name="contrasena" minlength="6" pattern="^(?!.*\s).*$" required>
+        <span class="validity-error" id="contrasena-error">La contraseña debe tener al menos 6 caracteres y no debe contener espacios en blanco.</span>
+           </li>
+
+
+           <li>
+            
+        <label for="confirmar_contrasena">Confirmar Contraseña:</label>
+        <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required>
+        <span class="validity-error" id="confirmar_contrasena-error">Este campo es obligatorio.</span>
+           </li>
+
+
+           <li>
+            <label for="conocimientos">Mis conocimientos de HTML son:</label>
+            <input type="range" id="conocimientos" name="conocimientos" min="1" max="10">
+          </li>
+
+          <li>
+            <label for="fechaInicio">Fecha de inicio:</label>
+            <input type="date" id="fechaInicio" name="fechaInicio" value="2023-11-03">
+          </li>
+
+          <li>
+            <label for="cantidad">Me gustaría recibir copias del manual de El manual de HTML5</label>
+            <input type="number" id="cantidad" name="cantidad" value="1" min="0" max="5">
+          </li>
+
+          <li>
+            <label for="registrame">También regístrame para el manual de HTML5</label><br>
+            <input type="checkbox" id="registrame" name="registrame" value="registrame">
+           </li>
+
+          <li>
+            <input type="submit" id="registro-submit" value="ENVÍAME">
+          </li>
+
+        </ul>
+
+       
+    </form>
+</body>
+</html>
