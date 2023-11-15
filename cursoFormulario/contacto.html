@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursobordes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+    <!-- Contenedor Principal-->
+    <div id="page">
+
+        <header>
+               <h1><img src="imgs/logo.png" alt="imagen logo"> Curso de HTML5 y CSS3</h1>
+        </header>
+
+        <div id="nav">
+            <ul>
+                <li id="contenidos"><a href="">Contenidos</a></li>
+                <li id="videos">
+                    <a href="videos.html">Vídeos</a>
+                    <ul>
+                        <li><a href="videos.html">Vídeos1</a></li>
+                        <li><a href="videos.html">Vídeos2</a></li>
+                        <li><a href="videos.html">Vídeos3</a></li>
+                    </ul>
+                </li>
+                <li id="contacto"><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <div id="contenedorFormulario">
+                <h1>Contáctenos</h1>
+                <form method="post">
+                    <input type="text" id="nombre" name="nombre" list="nombres" placeholder="Escriba su nombre" required><label></label><br>
+
+                    <datalist id="nombre">
+                        <option value="alex">
+                        <option value="juan">
+                        <option value="ana">
+                        <option value="pedro">
+                    </datalist>
+            
+                    <input type="email" id="email" name="email" placeholder="Escriba su email" required><label></label><br>
+            
+                    <textarea id="mensaje" name="mensaje" placeholder="Su mensaje..." required></textarea><br>
+            
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+        
+        <footer>
+            <p> HTML5 y CSS3 </p>
+            <p>Diseño de interfaces web - 2DAW</p>
+        </footer>
+
+
+    </div>
+</body>
+</html>

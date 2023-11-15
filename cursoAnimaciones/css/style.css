@@ -343,3 +343,103 @@ header {
   border-style: solid;
   border-color: transparent transparent #f06529 transparent; /* Color del triángulo */
 }
+
+/* Animación logo en cabecera */
+@keyframes animatedHeaderLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+header > h1 > img {
+  animation: animatedHeaderLogo 5s infinite;
+}
+
+/* Resto de animaciones */
+
+.mueveChincheta1 {
+  animation: mueveChincheta1 1s;
+  animation-fill-mode: forwards;
+  left: 0px;
+  animation-delay: 1s;
+}
+
+.mueveChincheta2 {
+  animation: mueveChincheta2 1s;
+  animation-fill-mode: forwards;
+  left: 0px;
+  animation-delay: 2s;
+}
+
+.mueveChincheta3 {
+  animation: mueveChincheta3 1s;
+  animation-fill-mode: forwards;
+  left: 0px;
+  animation-delay: 3s;
+}
+
+.trans1{
+  animation: animArticle1 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+.trans3{
+  animation: animArticle3 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+/* Chincheta 1  */
+@keyframes mueveChincheta1 {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 211px;
+  }
+}
+
+/* Chincheta 2  */
+@keyframes mueveChincheta2 {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 123px;
+  }
+}
+
+/* Chincheta 3  */
+@keyframes mueveChincheta3 {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 30px;
+  }
+}
+
+@keyframes animArticle1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes animArticle3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
