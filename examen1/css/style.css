@@ -37,10 +37,10 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
     background-color:#19196f;
-    background-image: url('../media/img/espornets.png');
+    background-image: url('../media/img/Sneakers\ logo\ design\ template\ free\ -\ Hecho\ con\ PosterMyWall.png');
     background-repeat: no-repeat;
-    background-position: 10% center;
-    background-size: 253px 100.27px;
+    background-position: 1% center;
+    background-size: 400px 200px;
     height:150px;
 }
 
@@ -85,7 +85,7 @@ header li a:hover {
 }
 
 .content-container {
-    text-align: left;
+    text-align: center;
     margin-left: 17%;
 }
 
