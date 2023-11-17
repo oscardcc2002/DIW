@@ -113,7 +113,7 @@ header li a:hover {
     border: none;
     width: 220px;
     height: 40px;
-    border-radius: 50px;
+    border-radius: 50px; /* Borde al botón para que sea redondeado */
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s; /* Transición de color del botón */
@@ -196,7 +196,8 @@ header li a:hover {
     margin: 0 auto;
     max-height: 100%;
     border-radius:10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra de la section */
+
     transition: transform 0.3s;
     border: 2px solid #19196f;
 }
@@ -365,7 +366,8 @@ header li a:hover {
 .footer_link:hover {
     transform: scale(1.1);
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
-    transition: transform 0.3s, text-shadow 0.3s;
+    transition: transform 0.3s, text-shadow 0.3s; /* Sombra blanca al pasar por el footer */
+
 }
 
 .footer-column img:hover {
@@ -419,7 +421,7 @@ header li a:hover {
     display: none;
     position: absolute;
     background-color: #19196f;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* sombra al menú desplegable*/
     z-index: 1;
     top: 100%; /* Ajusta la posición del menú desplegable */
     left: 0; 
@@ -492,9 +494,7 @@ header li a:hover {
 
 .nav2 ul li:hover ul{
     height: calc( var(--cantidad-items) * var(--cada-item) );
-
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,103,17,1) 35%, rgba(0,212,255,1) 100%);
-
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,103,17,1) 35%, rgb(4, 87, 103) 100%); /* Degradado del fondo del menú desplegable lateral */
 
 }
 

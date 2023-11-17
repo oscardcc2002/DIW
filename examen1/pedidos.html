@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>ESPORNETS</title>
+<style>
+
+form {
+    margin: 10px auto; /* Márgenes superior e inferior 10px, el resto automáticos */
+    border: 2px solid rgb(8, 75, 123); /* Borde superior e inferior de 2px con color #888 */
+    width: 710px; /* Ancho de 710px */
+    text-align: center; /* Texto alineado al centro */
+    margin: 20px; /* Márgenes externos de 20px */
+    background-color: rgba(9, 49, 149, 0.5); /* Fondo de color negro con una opacidad del 20% */
+    background-position: center; /* Posicionada al centro */
+    background-repeat: no-repeat;
+    border: 2px solid rgb(0, 53, 145)888;
+    width: 710px;
+    margin: 20px auto;
+    background-position: bottom;
+   border-radius: 15%;
+}
+label {
+    display: block; /* Muestra como bloque */
+    margin: auto; /* Márgenes automáticos */
+    text-align: center; /* Alineados al centro */
+}
+
+#registro-submit{
+
+border: none; /* Elimina los bordes */
+border-radius: 5px; /* Redondea las esquinas a 5px */
+background: radial-gradient(circle at center, rgb(175, 10, 10), rgb(1, 103, 220)); /* Fondo degradado radial */
+color: white; /* Texto de color blanco */
+text-transform: uppercase; /* Texto en mayúsculas */
+font-size: 2em; /* Tamaño 2em */
+font-family: Tahoma, Geneva, sans-serif; /* Fuente */
+opacity: 0.8; /* Opacidad del 80% */
+transition: opacity 0.25s linear; /* Transición al pasar el ratón */
+}
+
+#registro-submit:hover {
+    opacity: 1; /* Al pasar el ratón, se hace 100% opaco con una transición */
+}
+
+input{
+
+    background: transparent no-repeat top right;
+}
+
+input:valid:focus {
+    background-image: url('../imgs/valid.png');
+    background-repeat: no-repeat;
+}
+
+input:invalid:focus {
+    background-image: url('../imgs/invalid.png');
+    background-repeat: no-repeat;
+}
+
+label, button {
+    font-family: LeagueGothic, sans-serif;
+}
+
+.second-section{
+
+    background-image: url('../media/img/pexels-nappy-936094.jpg');
+
+}
+</style>
+        
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <nav class="navigation">
+                <ul><li>
+                  <a href="index.html" class="dropbtn">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Zapatillas</a>
+                        <div class="dropdown-content">
+                          <a href="hombre.html">Hombre</a>
+                          <a href="mujer.html">Mujer</a>
+                        </div>
+                      </li>
+
+
+                      <a href="pedidos.html" class="dropbtn">Pedidos</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <div class="second-section">
+            <form>
+                <!-- Nombre y apellidos -->
+                <label for="nombre">Nombre y Apellidos:</label>
+                <input type="text" id="nombre" name="nombre" pattern="^[A-Za-zÁÉÍÓÚáéíóúÜü\s']+$" required>
+
+                <!-- DNI -->
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]{1}" required>
+
+                <!-- Correo electrónico -->
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <!-- Teléfonos de contacto (puedes permitir varios campos) -->
+                <label for="telefono">Teléfono de Contacto:</label>
+                <input type="tel" id="telefono" list="telefonos" name="telefono" pattern="^\d{9}$" multiple>
+            
+                <!-- Fecha de nacimiento -->
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+                <!-- Producto a comprar -->
+                <label for="producto">Producto a Comprar:</label>
+                <select id="producto" name="producto" required>
+                    <option value="codigo1">ZM-120-RUN</option>
+                    <option value="codigo2">ZM-150-PRO</option>
+                    <option value="codigo3">ZM-120-SUP</option>
+                    <option value="codigo4">ZM-120-PRO</option>
+                    <option value="codigo5">ZH-120-RUN</option>
+                    <option value="codigo6">ZH-150-PRO</option>
+                    <option value="codigo7">ZH-120-SUP</option>
+                    <option value="codigo8">ZH-120-PRO</option>
+                    <!-- Agrega más opciones según sea necesario -->
+                </select>
+
+                <!-- Color de la caja de envoltorio -->
+                <label for="campoColor">Color de la Caja de Envoltorio:</label>
+                <input type="color" id="campoColor" name="campoColor" required>
+
+                <!-- Número de unidades -->
+                <label for="unidades">Número de Unidades:</label>
+                <input type="number" id="unidades" name="unidades" min="1" required>
+                <br>
+                <!-- Botón de enviar -->
+                <input type="submit" id="registro-submit" value="Realizar pedido">
+            </form>
+        
+        </div>
+
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <div class="footer-logo">
+                <img src="media/img/espornets.png" alt="imagen_logo">
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><u>COMPAÑÍA</u></li>
+                    <a href="index.html">
+                        <li class="footer_link">¿Quiénes somos?</li>
+                    </a>
+                    <a href="index.html">
+                        <li class="footer_link">¿Quieres trabajar con nosotros?</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><u>CONTACTO</u></li>
+                    <a href="mailto:info@espornets.es">
+                        <li class="footer_link">info@espornets.es</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                  <li><u>POLÍTICAS</u></li>
+                    <a href="">
+                        <li class="footer_link">Política de Privacidad</li>
+                    </a>
+                    <a href="">
+                        <li class="footer_link">Política de Cookies</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><u>Redes Sociales</u></li>
+                </ul>
+                    <img src="media/img/instagram_logo.png" alt="Instagram" style="height:30px">
+                </a>
+            </div>
+            <div class="mensajeFinal">
+              ESPORNETS - Calzado deportivo de calidad para todos.
+          </div>
+        </div>
+             
+
+    </div>
+</body>
+</html>
