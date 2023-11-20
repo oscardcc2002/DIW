@@ -10,6 +10,10 @@
 
     <!-- Page title and favicon -->
     <title>ESPORNETS</title>
+        <!-- Script rotando la zapatilla de hombre -->
+
+        <script src="/js/animacion.js"></script>
+
         
 </head>
 
@@ -27,7 +31,12 @@
                 </ul>
 
             </li>
-                <li><a href="#">- Publicaciones sobre la empresa</a></li>
+                <li><a href="#">- Publicaciones sobre la empresa</a>
+                <ul style="--cantidad-items: 4">
+                    <li><a href="videos1.html">· Vídeo 1</a></li>
+                    <li><a href="videos2.html">· Vídeo 2</a></li>
+                </ul>
+            </li>
             </ul>
         </div>
         <!-- Header -->
@@ -43,6 +52,13 @@
                         </div>
                       </li>
                       <a href="pedidos.html" class="dropbtn">Pedidos</a></li>
+                      <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Vídeos</a>
+                        <div class="dropdown-content">
+                            <a href="videos1.html">Vídeo 1</a>
+                            <a href="videos2.html">Vídeo 2</a>
+                        </div>
+                      </li>
                 </ul>
             </nav>
         </header>
@@ -104,7 +120,7 @@
                     </p>
                 </div>
                 <div class="ts-section-2">
-                    <img src="media/img/hombre.png" alt="Imagen de Menú">
+                    <img id="hombreImagen" src="media/img/hombre.png" alt="Imagen de zapatilla de hombre">
                     <br>
                     <a href="hombre.html">
                         <button class="round-button">Nuestras zapatillas de hombre</button>

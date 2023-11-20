@@ -1,0 +1,63 @@
+/* video.css */
+.second-section {
+    position: relative;
+}
+/* Estilos para el reproductor de video */
+.second-section video {
+    display: block;
+    margin: 0 auto; /* Centra el reproductor de video */
+    width: 50%;
+    box-shadow: 90% rgba(0, 0, 0, 0.3); /* Sombra del reproductor de video */
+}
+
+
+/* Estilos para controles personalizados de video */
+.second-section .custom-video-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(25, 25, 111, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.second-section .custom-video-controls:hover {
+    background-color: rgba(25, 25, 111, 1);
+}
+
+
+/* Estilos para los controles de video personalizados */
+.custom-video-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(25, 25, 111, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.custom-video-controls button, .custom-video-controls input {
+    margin: 0 5px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.custom-video-controls input[type="range"] {
+    width: 100px;
+}
+
+.custom-video-controls button:hover {
+    color: #cccccc;
+}
+

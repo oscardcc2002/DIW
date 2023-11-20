@@ -7,10 +7,14 @@
 
     <!-- CSS File -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 
     <title>ESPORNETS</title>
 <style>
 
+body, label, button, input, select {
+    font-family: 'Roboto', sans-serif;
+}
 form {
     margin: 10px auto; /* Márgenes superior e inferior 10px, el resto automáticos */
     border: 2px solid rgb(8, 75, 123); /* Borde superior e inferior de 2px con color #888 */
@@ -40,7 +44,6 @@ background: radial-gradient(circle at center, rgb(175, 10, 10), rgb(1, 103, 220)
 color: white; /* Texto de color blanco */
 text-transform: uppercase; /* Texto en mayúsculas */
 font-size: 2em; /* Tamaño 2em */
-font-family: Tahoma, Geneva, sans-serif; /* Fuente */
 opacity: 0.8; /* Opacidad del 80% */
 transition: opacity 0.25s linear; /* Transición al pasar el ratón */
 }
@@ -64,9 +67,6 @@ input:invalid:focus {
     background-repeat: no-repeat;
 }
 
-label, button {
-    font-family: LeagueGothic, sans-serif;
-}
 
 .second-section{
 
@@ -94,7 +94,13 @@ label, button {
 
 
                       <a href="pedidos.html" class="dropbtn">Pedidos</a></li>
-
+                      <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Vídeos</a>
+                        <div class="dropdown-content">
+                            <a href="videos1.html">Vídeo 1</a>
+                            <a href="videos2.html">Vídeo 2</a>
+                        </div>
+                      </li>
                 </ul>
             </nav>
         </header>
