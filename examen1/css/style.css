@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 /* HEADER and the img/links within */
 
 header {
-    background-color:#19196f;
+    background-color:#11114d;
     background-image: url('../media/img/Sneakers\ logo\ design\ template\ free\ -\ Hecho\ con\ PosterMyWall.png');
     background-repeat: no-repeat;
     background-position: 1% center;
@@ -73,12 +73,13 @@ header li a:hover {
  background-color: #ffffff; 
     color: black; 
     filter: brightness(1.2); /* Ajusta el brillo al pasar el mouse sobre el botón */
+    font-size: 20px; 
 
     
 }
 
 .first-section {
-    background-color: #19196f;
+    background-color: #0f0f43;
     background-image: url('../media/img/pexels-nappy-936094.jpg');
     background-size: cover;
     background-position: center;
@@ -96,7 +97,7 @@ header li a:hover {
 }
 
 .first-section p, .first-section h1, .first-section button {
-    color: white;
+    color: rgb(149, 149, 149);
     text-align: center;
     margin-left: 10%;
 }
@@ -122,7 +123,7 @@ header li a:hover {
 }
 
 .first-section button:hover {
-    background-color: #19196f;
+    background-color: #0f0f3d;
     color: white;
 }
 
@@ -130,9 +131,9 @@ header li a:hover {
 
 .separator-hr {
     border: none;
-    height: 50px;
-    background: linear-gradient(to bottom, transparent 0%, #19196f 10%, #19196f 90%, transparent 100%),
-                linear-gradient(to top, transparent 0%, #19196f 10%, #19196f 90%, transparent 100%);
+    height: 40px;
+    background: linear-gradient(to bottom, transparent 0%, #0c0c37 10%, #0b0b31 90%, transparent 100%),
+                linear-gradient(to top, transparent 0%, #0b0b31 10%, #0b0b30 90%, transparent 100%);
     margin-top: -15px;
 }
 
@@ -172,7 +173,7 @@ header li a:hover {
 .round-button {
     border: none;
     border-radius: 50px; 
-    background-color: #19196f;
+    background-color: #0d0d3a;
     color: white;
     padding: 20px 60px; 
     font-size: 16px; 
@@ -185,6 +186,7 @@ header li a:hover {
     background-color: #ffffff; 
     color: black; 
     filter: brightness(1.2); 
+    font-size: 19px; 
 }
 
 /* Images Style */
@@ -199,7 +201,7 @@ header li a:hover {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra de la section */
 
     transition: transform 0.3s;
-    border: 2px solid #19196f;
+    border: 2px solid #0f0f3c;
 }
 
 .sc-ps-section-1, .sc-ps-section-2 {
@@ -212,15 +214,16 @@ header li a:hover {
 }
 
 .sc-ps-section-1 p, .sc-ps-section-2 p {
-    color: #19196f;
+    color: #0f0f3b;
     margin-top: 10px;
 }
 
 /* IMG Effect */
 .sc-ps-section-1 img:hover, .sc-ps-section-2 img:hover {
     transform: rotate(1deg);
-    border: 4px solid #19196f;
+    border: 4px solid #0e0e3d;
     opacity:0.9;
+    width: 450px;
 }
 
 /* Third Section */
@@ -241,7 +244,7 @@ header li a:hover {
 
 .third-section h1 {
     width: 100%;
-    color:#19196f;
+    color:#0f0f3c;
     padding-bottom:50px;
 }
 
@@ -252,7 +255,7 @@ header li a:hover {
 }
 
 .ts-section-1 p {
-    color:#19196f;
+    color:#0f0f40;
     font-size:26px;
     margin-left: 100px; 
 }
@@ -279,7 +282,7 @@ header li a:hover {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(253, 240, 240);
-    color: #19196f;
+    color: #11113d;
     padding: 40px;
     padding-top: 5%;
     padding-bottom: 15%;
@@ -334,7 +337,7 @@ header li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; 
-    background-color: #19196f;
+    background-color: #0d0d38;
     color: white;
     padding: 20px;
 }
