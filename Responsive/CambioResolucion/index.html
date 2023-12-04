@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polilla con srcset</title>
+</head>
+<body>
+
+    <h1>Polilla con srcset</h1>
+
+    <img src="imgs/polilla.jpg"
+         srcset="imgs/polilla2.jpg 320w,
+                 imgs/polilla1.jpg 480w,
+                 imgs/polilla4.jpg 800w"
+         sizes="(max-width: 300px) 320px,
+                (max-width: 500px) 480px,
+                800px"
+         alt="Polilla">
+
+</body>
+</html>
