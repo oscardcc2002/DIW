@@ -1,0 +1,167 @@
+.parent1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    height: 50vw;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 3 / 2; 
+            background-image: url("/imgs/1.jpeg");
+            background-repeat: none ;
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+
+
+        }
+
+    .div2 { grid-area: 1 / 2 / 2 / 3;
+        background-image: url("/imgs/2.jpeg");
+        background-repeat: none ;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+
+         }
+
+    .div3 { grid-area: 2 / 2 / 3 / 3;
+        background-image: url("/imgs/3.jpeg");
+        background-repeat: none ;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+
+         }
+
+    .div4 { grid-area: 1 / 3 / 3 / 4;
+        background-image: url("/imgs/4.jpeg");
+        background-repeat: none ;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+
+         }
+
+    .div5 { grid-area: 1 / 4 / 2 / 5;
+        background-image: url("/imgs/5.jpeg");
+        background-repeat: none ;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+
+         }
+
+    .div6 { grid-area: 2 / 4 / 3 / 5;
+        background-image: url("/imgs/6.jpeg");
+        background-repeat: none ;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+
+         }
+
+
+
+
+    .parent2 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        height: 50vw;
+        }
+        
+        .div7 { grid-area: 1 / 1 / 2 / 2;
+            background-image: url("/imgs/7.jpg");
+            background-repeat: none ;
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+
+         }
+
+        .div8 { grid-area: 1 / 2 / 2 / 3; 
+            background-image: url("/imgs/8.jpeg");
+            background-repeat: none ;
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+
+        
+        }
+        .div9 { grid-area: 1 / 3 / 2 / 4; 
+            background-image: url("/imgs/9.jpeg");
+            background-repeat: none ;
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+
+        
+        }
+        .div10 { grid-area: 2 / 1 / 3 / 2; 
+            background-image: url("/imgs/10.jpeg");
+            background-repeat: none ;
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+
+        
+        }
+        .div11 { grid-area: 2 / 2 / 3 / 3; 
+            background-image: url("/imgs/11.jpg");
+            background-repeat: none ;
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+
+        
+        }
+        .div12 { grid-area: 3 / 1 / 4 / 2; 
+            background-image: url("/imgs/12.jpeg");
+            background-repeat: none ;
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+
+        
+        }
+
+        h1:hover {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            transition: text-shadow 1s ease-in-out;
+        }
+
+        .texto{
+            text-align: left;
+            background-color: rgb(52, 52, 52, 0.8);
+            height: auto;
+            width: 150px;
+            color: white;
+            display: flex;
+            margin-left: auto;
+            margin-right: 10px;
+            font-size: 20px;
+           margin-top: 10px;
+           padding: 5px;
+        
+        }
+
+
+        h1:hover ~ .parent1 .div1,
+        h1:hover ~ .parent1 .div2,
+        h1:hover ~ .parent1 .div3,
+        h1:hover ~ .parent1 .div4,
+        h1:hover ~ .parent1 .div5,
+        h1:hover ~ .parent1 .div6,
+        h2:hover ~ .parent2 .div7,
+        h2:hover ~ .parent2 .div8,
+        h2:hover ~ .parent2 .div9,
+        h2:hover ~ .parent2 .div10,
+        h2:hover ~ .parent2 .div11,
+        h2:hover ~ .parent2 .div12 {
+            box-shadow: 0 0 20px rgba(128, 128, 128, 0.5);
+            transition: box-shadow 1s ease-in-out;
+        }
