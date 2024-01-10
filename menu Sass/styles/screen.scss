@@ -1,0 +1,95 @@
+// Variables
+$color-text: #eee;
+$color-text-hover: #fff;
+$color-background: #666;
+$color-background-hover: #888;
+
+// Mixins
+// Para establecer el color del texto y el color del fondo 
+@mixin colors($text-color, $background-color) {
+  color: $text-color;
+  background-color: $background-color;
+}
+
+
+// Para establecer el color del texto y el color del fondo cuando hacemos hover
+@mixin hoverColors($text-color, $background-color) {
+  &:hover {
+    @include colors($text-color, $background-color);
+  }
+}
+
+// Para el box-sizing
+@mixin boxSizing($value) {
+  box-sizing: $value;
+}
+
+// Para las transiciones
+@mixin transitions($property, $duration, $timing: linear) {
+  transition: $property $duration $timing;
+}
+// Para las animaciones 
+@mixin animations($name, $duration, $timing: linear) {
+  animation: $name $duration $timing;
+}
+
+// Nexting
+header {
+  @include colors($color-text, $color-background);
+}
+
+nav {
+  ul {
+    list-style: none;
+    padding: 10px;
+
+    li {
+      display: inline-block;
+
+      a {
+        text-decoration: none;
+        padding: 10px;
+        @include colors($color-text, $color-background);
+        @include hoverColors($color-text-hover, $color-background-hover);
+      }
+
+      ul.submenu {
+        display: none;
+        position: absolute;
+        margin-top: 5px;
+       text-align: center;
+
+   
+
+        li {
+            padding: 9.5px;
+            display: block;
+
+          a {
+            @include colors($color-text, $color-background);
+            @include hoverColors($color-text-hover, $color-background-hover);
+          }
+        }
+      }
+
+      &:hover {
+        ul.submenu {
+          display: block;
+        }
+      }
+    }
+  }
+  margin-bottom: 120px;
+}
+
+footer {
+  @include colors($color-text, $color-background);
+  @include boxSizing(border-box);
+  padding: 10px;
+  @include transitions(all, 0.3s);
+
+  // Invocar mixin para el footer
+  @include colors($color-text, $color-background);
+  @include boxSizing(border-box);
+
+}
