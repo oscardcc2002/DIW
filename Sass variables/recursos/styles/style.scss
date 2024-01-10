@@ -1,0 +1,48 @@
+// Definir variables de color
+$color-naranja: #FF8000;
+$color-verdoso: #2E5F64;
+
+// Definir variables de padding y tamaño de letra
+$padding-destacado: 6px;
+$tamano-letra-destacado1: 1.6em;
+$tamano-letra-destacado2: 1.4em;
+$padding-destacado2: 5px;
+$padding-general: 20px;
+
+// Establecer estilos para el primer destacado
+#primero {
+  padding: $padding-general;
+
+  .destacado {
+    color: $color-naranja;
+    font-size: $tamano-letra-destacado1;
+    text-align: center;
+    padding: $padding-destacado;
+  }
+
+  p {
+    &:not(.destacado):first-of-type {
+      font-style: italic;
+    }
+  }
+}
+
+// Establecer estilos para el segundo destacado
+#segundo {
+  padding: $padding-general;
+
+  .destacado {
+    color: $color-verdoso;
+    font-size: $tamano-letra-destacado2;
+    text-decoration: underline;
+    padding: $padding-destacado2;
+  }
+
+  #parrafos {
+    text-align: right;
+
+    p {
+      font-style: italic;
+    }
+  }
+}
