@@ -1,95 +1,120 @@
 // Variables
-$color-text: #eee;
-$color-text-hover: #fff;
-$color-background: #666;
-$color-background-hover: #888;
+$textColor: #eee; // Color de texto principal
+$hoverTextColor: #fff; // Color de texto al pasar el ratón
+$backgroundColor: #666; // Color de fondo principal
+$hoverBackgroundColor: #888; // Color de fondo al pasar el ratón
 
 // Mixins
-// Para establecer el color del texto y el color del fondo 
-@mixin colors($text-color, $background-color) {
-  color: $text-color;
-  background-color: $background-color;
+@mixin setColor($text, $background) {
+  color: $text;
+  background-color: $background;
 }
 
-
-// Para establecer el color del texto y el color del fondo cuando hacemos hover
-@mixin hoverColors($text-color, $background-color) {
+@mixin setHoverColor($text, $background) {
   &:hover {
-    @include colors($text-color, $background-color);
+    color: $text;
+    background-color: $background;
   }
 }
 
-// Para el box-sizing
-@mixin boxSizing($value) {
-  box-sizing: $value;
+@mixin setBoxSizing($type: border-box) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing: $type;
+  box-sizing: $type;
 }
 
-// Para las transiciones
-@mixin transitions($property, $duration, $timing: linear) {
+@mixin setTransition($property, $duration, $timing: linear) {
+  -moz-transition: $property $duration $timing;
+  -webkit-transition: $property $duration $timing;
   transition: $property $duration $timing;
 }
-// Para las animaciones 
-@mixin animations($name, $duration, $timing: linear) {
+
+@mixin setAnimation($name, $duration, $timing: linear) {
+  -moz-animation: $name $duration $timing;
+  -webkit-animation: $name $duration $timing;
   animation: $name $duration $timing;
 }
 
-// Nexting
-header {
-  @include colors($color-text, $color-background);
-}
-
+// Nesting
 nav {
+  position: absolute;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+
   ul {
-    list-style: none;
-    padding: 10px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 
-    li {
-      display: inline-block;
+    > ul {
+      width: 100%;
+      height: 32px;
+      @include setColor($textColor, $backgroundColor); // Aplicar colores principales
+    }
 
-      a {
-        text-decoration: none;
-        padding: 10px;
-        @include colors($color-text, $color-background);
-        @include hoverColors($color-text-hover, $color-background-hover);
-      }
+    a {
+      @include setColor($textColor, $backgroundColor); // Aplicar colores principales
+      text-decoration: none;
+      width: 160px;
+      padding: 7px 20px;
+      display: block;
+      text-align: center;
+      cursor: pointer;
 
-      ul.submenu {
-        display: none;
-        position: absolute;
-        margin-top: 5px;
-       text-align: center;
-
-   
-
-        li {
-            padding: 9.5px;
-            display: block;
-
-          a {
-            @include colors($color-text, $color-background);
-            @include hoverColors($color-text-hover, $color-background-hover);
-          }
-        }
-      }
-
+      @include setHoverColor($hoverTextColor, $hoverBackgroundColor); // Aplicar colores al pasar el ratón
+      @include setTransition(all, 0.4s); // Aplicar transición en todas las propiedades
       &:hover {
-        ul.submenu {
-          display: block;
-        }
+        @include setAnimation(iluminar, 0.4s); // Aplicar animación al pasar el ratón
       }
     }
   }
-  margin-bottom: 120px;
+
+  ul.submenu {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    @include setTransition(height, 0.5s, ease-out); // Aplicar transición de altura
+  }
+
+  li.categoria {
+    float: left;
+
+    > a {
+      @include setTransition(padding, 0.4s, ease-out); // Aplicar transición de padding
+
+      &:hover {
+        padding: 10px 20px; // Cambiar padding al pasar el ratón
+      }
+    }
+
+    &:hover {
+      ul.submenu {
+        height: 100px; // Cambiar altura al pasar el ratón
+      }
+    }
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  padding: 12px 30px;
+  font-size: 1.8em;
+  color: #444;
+  background-color: #eee;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #aaa;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 footer {
-  @include colors($color-text, $color-background);
-  @include boxSizing(border-box);
-  padding: 10px;
-  @include transitions(all, 0.3s);
-
-  // Invocar mixin para el footer
-  @include colors($color-text, $color-background);
-  @include boxSizing(border-box);
-
+  @include setColor($textColor, $backgroundColor); // Aplicar colores principales al footer
+  @include setBoxSizing; // Aplicar box-sizing
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 5px;
 }
