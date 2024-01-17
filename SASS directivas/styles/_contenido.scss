@@ -1,0 +1,32 @@
+// Cambio en el hover del botón del login
+#contenido .col-left .login button:hover {
+@if$theme == light{
+
+
+
+ background-color: darken(#ddf, 10%)
+}else{background-color: lighten(#138, 20%)};
+
+
+  color: #eee; // Cambiar color del texto en ambos casos
+}
+
+// Lista de clases de iconos y sus propiedades
+$icons: (
+  (icon-menu, "../images/menu.png", 0px, -30px, 50px, 54px),
+  (icon-news, "../images/news.png", 0px, -90px, 30px, 39px),
+  (icon-money, "../images/money.png", 0px, -100px, 50px, 54px),
+  (icon-contact, "../images/contact.png", 0px, 0px, 30px, 30px)
+);
+
+@each $icono in $icons{
+    .icon-#{nth($icono,1)}{
+            background-image: url(nth($icono,2));
+            background-position: nth($icono,3) nth($icono,4);
+            height: nth($icono,5);
+            width:nth($icono,6);
+    }
+}
+
+
+

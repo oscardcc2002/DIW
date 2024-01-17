@@ -1,0 +1,52 @@
+// Colores
+$colorText: #eee;
+$colorTextHover: lighten($colorText, 10%); // Aclarar el color del texto al pasar el ratón un 10%
+$colorBack: #15a;
+$colorBackHover: lighten($colorBack, 10%); // Aclarar el color de fondo al pasar el ratón un 10%
+$colorTitulo: darken($colorBack, 10%); // Oscurecer el color del fondo un 10%
+
+
+// Archivos a importar
+@import "_mixin"; // Importar los mixins desde el archivo mixin.scss
+@import "_contenido"; // Importar el contenido desde el archivo contenido.scss
+
+// Resto del código (manteniendo body, header, y footer)
+
+// Keyframes
+@keyframes iluminar {
+  from {
+    color: $colorText;
+    background-color: $colorBack;
+  }
+  to {
+    color: $colorTextHover;
+    background-color: $colorBackHover;
+  }
+}
+
+// Estilo del body
+body {
+  padding: 0;
+  margin: 0;
+}
+
+// Estilo del header
+header {
+  padding: 12px 30px;
+  font-size: 1.8em;
+  color: #444;
+  background-color: #eee;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #aaa;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+// Estilo del footer
+footer {
+  @include setColor($colorText, $colorBack);
+  @include setBoxSizing;
+  position: fixed; // Cambiar de absolute a fixed
+  width: 100%;
+  bottom: 0;
+  padding: 5px;
+}

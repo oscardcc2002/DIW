@@ -1,0 +1,73 @@
+// Placeholders
+%button-block {
+    @include setBoxSizing;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  %input-block {
+    @include setBoxSizing;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #bbb;
+  }
+  
+  // Estilos para el contenido div
+  #contenido {
+    padding: 30px 20px;
+  
+    .col-left {
+      @include setBoxSizing;
+      width: 30%;
+      float: left;
+      padding: 10px;
+  
+      // Diseño responsivo para tamaños small
+      @include responsiveDesign("float", none);
+      @include responsiveDesign("width", 100%);
+  
+      // Extensiones para inputs y botones del login
+      form.login {
+        input {
+          @extend %input-block;
+        }
+  
+        button {
+          @extend %button-block;
+        }
+      }
+    }
+  
+    .col-right {
+      @include setBoxSizing;
+      margin-left: 30%;
+      width: 70%;
+      padding: 10px;
+  
+      h1 {
+        color: $colorTitulo;
+        font-size: 1.6em;
+      }
+  
+      // Diseño responsivo para tamaños small
+      @include responsiveDesign("margin-left", 0);
+      @include responsiveDesign("width", 100%);
+    }
+  
+    .button-action {
+      background-color: $colorBack;
+      color: white;
+  
+      &:hover {
+        background-color: lighten($colorBack, 20%);
+      }
+    }
+  
+    // Diseño responsivo para tamaños medium
+    @include responsiveDesign("padding", 10px 20px);
+  }
+  
