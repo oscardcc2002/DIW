@@ -1,38 +1,40 @@
-// Mixins
-@mixin setColor($text, $background) {
-    color: $text;
-    background-color: $background;
-  }
-  
-  @mixin setHoverColor($text, $background) {
-    &:hover {
-      color: $text;
-      background-color: $background;
-    }
-  }
-  
-  @mixin setBoxSizing($type: border-box) {
-    -webkit-box-sizing: $type;
-    -moz-box-sizing: $type;
-    box-sizing: $type;
-  }
-  
-  @mixin setTransition($property, $duration, $timing: linear) {
-    -moz-transition: $property $duration $timing;
-    -webkit-transition: $property $duration $timing;
-    transition: $property $duration $timing;
-  }
-  
-  @mixin setAnimation($name, $duration, $timing: linear) {
-    -moz-animation: $name $duration $timing;
-    -webkit-animation: $name $duration $timing;
-    animation: $name $duration $timing;
-  }
-  
-  // Nuevo mixin para diseño responsivo
-  @mixin responsiveDesign($property, $value) {
-    @media (max-width: 1024px) {
+// Mixin para establecer el esquema de colores
+@mixin color-scheme($text-color, $bg-color) {
+  color: $text-color;
+  background-color: $bg-color;
+}
+
+// Mixin para establecer el modelo de caja
+@mixin box-sizing($type) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing: $type;
+  box-sizing: $type;
+}
+
+// Mixin para establecer transiciones
+@mixin transition($property, $duration, $timing: linear) {
+  -moz-transition: $property $duration $timing;
+  -webkit-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+// Mixin para establecer animaciones
+@mixin animation($name, $duration, $timing: linear) {
+  -moz-animation: $name $duration $timing;
+  -webkit-animation: $name $duration $timing;
+  animation: $name $duration $timing;
+}
+
+// Mixin para estilos responsivos en dispositivos pequeños
+@mixin responsiveSmall($property, $value){
+  @media (max-width: 800px) {
       #{$property}: $value;
-    }
   }
-  
+}
+
+// Mixin para estilos responsivos en dispositivos medianos
+@mixin responsiveMedium($property, $value){
+  @media (max-width: 1024px) {
+      #{$property}: $value;
+  }
+}
