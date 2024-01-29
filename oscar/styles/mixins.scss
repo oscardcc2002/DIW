@@ -1,0 +1,14 @@
+// Mixin que acepta 3 parámetros sin importar el orden
+@mixin estilos-generales($color: null, $tamanio: null, $fondo: null) {
+    // Propiedades generales
+    color: $color;
+    font-size: $tamanio;
+    background-color: $fondo;
+  }
+
+// Mixin para estilos responsivos en dispositivos pequeños
+  @mixin responsiveSmall($property, $value){
+    @media (max-width: 800px) {
+        #{$property}: $value;
+    }
+  }

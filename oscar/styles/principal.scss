@@ -1,0 +1,278 @@
+// Variables globales
+$theme: light; // Variable para el tema (light/dark)
+
+//Creamos la variable de position absolute ya que la utilizamos muchas veces y por si queremos cambiar la propiedad del objeto de forma rápida
+$positionAbsolute: absolute;
+// Importación de archivos parciales
+@import "_menu.scss";
+@import "_contenido.scss";
+@import "mixins.scss";
+@import "function.scss";
+
+// Estilos para la barra de navegación en desktop
+nav#desktop {
+  position: $positionAbsolute;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+
+  // Estilos específicos para pantallas de hasta 1024px
+  @media (max-width: 1024px) {
+    display: none; // Ocultar la barra de navegación
+  }
+
+  //Vamos a extender "a" ya que más abajo lo volvemos a utilizar para el enlace del submenu y hay muchas propiedades compartidas
+  // Estilos para la lista no ordenada dentro de la barra de navegación
+  %ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  // Estilos para submenús desplegables
+  ul.submenu {
+    position: $positionAbsolute;
+    height: 0;
+    overflow: hidden;
+    // Resta para calcular los segundos exactos que queremos que dure la animación por si no tenemos una calculadora a mano
+    transition: height 0.6s - 0.1s ease-out;
+  }
+
+  // Estilos para la barra de navegación principal de forma anidada y directa para hacer el código más intuitivo
+  > ul {
+    width: 100%;
+    height: 32px;
+    color: #eee;
+    background-color: #138;
+  }
+
+  // Estilos para los enlaces en la barra de navegación
+  a {
+    color: #eee;
+    background-color: #138;
+    text-decoration: none;
+    width: 160px;
+    padding: 7px 20px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+
+    // Efecto de iluminación al pasar el ratón
+    &:hover {
+
+      //Usamos la función que hemos creado en el function.scss en el hover
+      color: escalar-en-gris(#fff);
+      background-color: #1744b5;
+      animation: iluminar 0.4s linear;
+    }
+  }
+  //Utilizamos nesting para hacer el código más intuitivo y legible
+  // Estilos para las categorías en la barra de navegación
+  li.categoria {
+    float: left;
+
+    // Transición en el padding al pasar el ratón
+    > a {
+      transition: padding 0.4s ease-out;
+
+      // Ajuste del padding al pasar el ratón
+      &:hover {
+        padding: 10px 20px;
+      }
+    }
+
+    // Despliegue del submenú al pasar el ratón sobre la categoría
+    &:hover {
+      ul.submenu {
+        height: 100px;
+      }
+    }
+  }
+}
+
+// Estilos para la barra de navegación en dispositivos móviles
+nav#mobile {
+  display: none;
+  float: right;
+
+  // Mostrar la barra de navegación en dispositivos de hasta 1024px
+  @media (max-width: 1024px) {
+    display: block;
+  }
+
+  // Despliegue automático del menú al pasar el ratón
+  &:hover {
+    ul {
+      height: auto;
+    }
+  }
+
+  // Estilos para la lista no ordenada dentro de la barra de navegación móvil
+  ul {
+    //Extendemos "ul" mediante placeholder y así podemos eleminar líneas de código repetidas
+    @extend %ul;
+    overflow: hidden;
+    position: $positionAbsolute;
+    right: 10px;
+    top: 40px;
+
+    // Estilos para los enlaces en la barra de navegación móvil
+    a {
+      
+      color: #eee;
+      background-color: #138;
+      text-decoration: none;
+      width: 160px;
+      padding: 7px 20px;
+      display: block;
+      text-align: center;
+      font-size: 0.6em;
+      font-weight: normal;
+
+      // Efecto de iluminación al pasar el ratón
+      &:hover {
+
+        //Usamos la función que hemos creado en el function.scss en el hover
+        color: escalar-en-gris(#fff);
+        background-color: #1744b5;
+        animation: iluminar 0.4s linear;
+      }
+    }
+  }
+}
+
+// Estilos para la sección de contenido
+#contenido {
+  padding: 30px 20px;
+
+  // Estilos para la columna izquierda del contenido
+  .col-left {
+    width: 30%;
+    float: left;
+    padding: 10px;
+
+    // Ajuste de estilos para pantallas de hasta 800px
+    @media (max-width: 800px) {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  // Estilos para la columna derecha del contenido
+  .col-right {
+    margin-left: 30%;
+    width: 70%;
+    padding: 10px;
+
+    // Estilos para el título en la columna derecha
+    h1 {
+      color: #0b225b;
+      font-size: 1.6em;
+    }
+
+    // Ajuste de estilos para pantallas de hasta 800px
+    // Utilizamos el mixin que hemos creado y así nos ahorramos código y es mñas intuitivo y no hace falta utilizar el media querie
+      @include responsiveSmall(margin-left, 0);
+      @include responsiveSmall(width, 100%);
+    
+  }
+
+  // Estilos para los botones de acción en el contenido
+  .button-action {
+    background-color: #138;
+    color: white;
+
+    // Efecto de iluminación al pasar el ratón
+    &:hover {
+      background-color: #1c55e3;
+    }
+  }
+
+  // Ajuste de estilos para pantallas de hasta 1024px
+  @media (max-width: 1024px) {
+    padding: 10px 20px;
+  }
+}
+
+// Estilos para los elementos "i"
+i {
+  display: inline-block;
+}
+
+// Definición de estilos para iconos
+.icon-menu {
+  background-image: url(../images/menu.png);
+  background-position: 0px 0px;
+  height: 30px;
+  width: 32px;
+}
+
+.icon-news {
+  background-image: url(../images/news.png);
+  background-position: 0px -90px;
+  height: 30px;
+  width: 39px;
+}
+
+.icon-money {
+  background-image: url(../images/money.png);
+  background-position: 0px -100px;
+  height: 50px;
+  width: 54px;
+}
+
+.icon-contact {
+  background-image: url(../images/contact.png);
+  background-position: 0px 0px;
+  height: 30px;
+  width: 30px;
+}
+
+// Definición de animación de iluminación
+@keyframes iluminar {
+  from {
+    color: #eee;
+    background-color: #138;
+  }
+  to {
+    color: white;
+    background-color: #1744b5;
+  }
+}
+
+// Estilos generales para el cuerpo del documento
+body {
+  padding: 0;
+  margin: 0;
+
+  // Uso del mixins dentro del archivo mixins.scss para ahorrar tiempo en la creación del código y hacerlo todo en una misma línea
+  @include estilos-generales($fondo: #138, $color: #eee);
+
+  // Aplicación de estilos condicionales según el valor de $theme
+  @if $theme == dark {
+    background-color: #138; // Estilos para el tema oscuro
+  } @else if $theme == light {
+    background-color: #ddf; // Estilos para el tema claro
+    color: #138;
+  }
+}
+
+// Estilos para la cabecera
+header {
+  // otro uso del mixin creado para ahorrar tiempo en la creación del código y hacerlo todo en una misma línea
+  @include estilos-generales($tamanio: 1.8em, $fondo: #eee, $color: #444);
+  padding: 12px 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #aaa;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+// Estilos para el pie de página
+footer {
+  color: #eee;
+  background-color: #138;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 5px;
+}

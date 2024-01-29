@@ -1,0 +1,120 @@
+
+// Estilos para el menú desktop
+nav#desktop {
+    position: absolute;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  @media (max-width: 1024px) {
+    nav#desktop {
+      display: none;
+    }
+  }
+  
+  nav#desktop ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  nav#desktop ul.submenu {
+    position: absolute;
+    height: 0px;
+    overflow: hidden;
+    -moz-transition: height 0.5s ease-out;
+    -webkit-transition: height 0.5s ease-out;
+    transition: height 0.5s ease-out;
+  }
+  
+  nav#desktop > ul {
+    width: 100%;
+    height: 32px;
+    color: #eee;
+    background-color: #138;
+  }
+  
+  nav#desktop a {
+    color: #eee;
+    background-color: #138;
+    text-decoration: none;
+    width: 160px;
+    padding: 7px 20px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  nav#desktop a:hover {
+    color: white;
+    background-color: #1744b5;
+    -moz-animation: iluminar 0.4s linear;
+    -webkit-animation: iluminar 0.4s linear;
+    animation: iluminar 0.4s linear;
+  }
+  
+  nav#desktop li.categoria {
+    float: left;
+  }
+  
+  nav#desktop li.categoria > a {
+    -moz-transition: padding 0.4s ease-out;
+    -webkit-transition: padding 0.4s ease-out;
+    transition: padding 0.4s ease-out;
+  }
+  
+  nav#desktop li.categoria:hover > a {
+    padding: 10px 20px;
+  }
+  
+  nav#desktop li.categoria:hover ul.submenu {
+    height: 100px;
+  }
+  
+  // Estilos para el menú mobile
+  nav#mobile {
+    display: none;
+    float: right;
+  }
+  
+  @media (max-width: 1024px) {
+    nav#mobile {
+      display: block;
+    }
+  }
+  
+  nav#mobile:hover ul {
+    height: auto;
+  }
+  
+  nav#mobile ul {
+    margin: 0px;
+    height: 0px;
+    overflow: hidden;
+    list-style-type: none;
+    position: absolute;
+    right: 10px;
+    top: 40px;
+  }
+  
+  nav#mobile ul a {
+    color: #eee;
+    background-color: #138;
+    text-decoration: none;
+    width: 160px;
+    padding: 7px 20px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.6em;
+    font-weight: normal;
+  }
+  
+  nav#mobile ul a:hover {
+    color: white;
+    background-color: #1744b5;
+    -moz-animation: iluminar 0.4s linear;
+    -webkit-animation: iluminar 0.4s linear;
+    animation: iluminar 0.4s linear;
+  }
+  

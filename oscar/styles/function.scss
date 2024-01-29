@@ -1,0 +1,6 @@
+// Función para escalar un color en gris
+@function escalar-en-gris($color, $escala: 80%) {
+    // Escala en gris usando mix
+    @return mix(#000, $color, $escala);
+  }
+  
