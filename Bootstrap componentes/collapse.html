@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap Componentes - Collapse</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Noticia de Bàsquet con Collapse</h2>
+
+    <!-- Botón que despliega/colapsa el texto -->
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#textoNoticia" aria-expanded="false" aria-controls="textoNoticia">
+        Mostrar/ocultar texto de la noticia
+    </button>
+    <a class="btn btn-link" data-toggle="collapse" href="#textoNoticia" role="button" aria-expanded="false" aria-controls="textoNoticia">
+        Mostrar/ocultar texto de la noticia
+    </a>
+    <!-- Texto de la noticia dentro de un elemento colapsable -->
+    <div class="collapse mt-3" id="textoNoticia">
+        <div class="card card-body">
+            <h5>Anderson se queda en el Valencia Basket</h5>
+            <p>Ya es oficial. Justin Anderson seguirá en el Valencia Basket hasta el final de temporada.
+                El exterior norteamericano, que llegó al equipo valenciano hace mes y medio con un contrato temporal de 45 días ha convencido en estas semanas con su rendimiento en la cancha y su profesionalidad a Álex Mumbrú y
+                a a la dirección deportiva del club. Valencia Basket y Justin Anderson amplían así el contrato que expiraba ayer.</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
